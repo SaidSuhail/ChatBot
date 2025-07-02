@@ -14,7 +14,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("http://localhost:5175", "https://chat-ui-neon-phi.vercel.app")
+        policy.WithOrigins("https://chat-ui-neon-phi.vercel.app")
         .AllowAnyHeader()
         .AllowAnyMethod();
     });
