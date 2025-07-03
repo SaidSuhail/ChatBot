@@ -14,7 +14,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("https://chat-ui-neon-phi.vercel.app")
+        policy.WithOrigins("http://localhost:5175", "https://chat-ui-neon-phi.vercel.app")
         .AllowAnyHeader()
         .AllowAnyMethod();
     });
@@ -33,7 +33,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-app.MapGet("/", () => "✅ Welcome to the ChatBot API. Use /api/Chat for interaction.");
+//app.MapGet("/", () => "✅ Welcome to the ChatBot API. Use /api/Chat for interaction.");
 
 
 app.Run();
