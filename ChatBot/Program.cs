@@ -33,7 +33,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-//app.MapGet("/", () => "✅ Welcome to the ChatBot API. Use /api/Chat for interaction.");
+app.MapGet("/", () => "✅ Welcome to the ChatBot API. Use /api/Chat for interaction.");
 
 
 app.Run();
